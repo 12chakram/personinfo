@@ -1,0 +1,117 @@
+
+
+html, body {
+	margin : 0;
+	padding : 0;
+	background : #fbfcfd;
+	height : 100%;
+}
+
+img {border : 0;}
+
+.wrapper {
+	position : relative;
+	background : #CCE9FF;
+	width : 100%;
+	height : 45%;
+}
+
+.box{
+	position: absolute;
+	bottom: 0;
+	background : url(../gfx/box-title.gif) repeat-x left top transparent;
+	border-bottom : 1px solid #e2e5e8;
+	padding : 4px 0 0 0;
+	width : 100%;
+	height: 30px;
+}
+
+.container {
+	position : relative;
+	margin : 0 auto;
+	width : 547px;
+	height: 35px;
+}
+
+.container h1{
+	position : absolute;
+	left : 0;
+	top : -95px;
+	background : url(../gfx/logo.png) no-repeat center top;
+	text-align : left;
+	font-size : 0;
+	width : 480px;
+	height : 100px;
+}
+
+.container h1 a, .container h1 a:link, .container h1 a:active, .container h1 a:visited{
+	position : absolute;
+	top : 0;
+	font-size : 0;
+}
+
+.container h2{
+	float : left;
+	padding : 6px 5px 0 0;
+	font: 14px 'MuseoSans700', Arial;
+	color : #002e68;
+	line-height : 1.0em;
+	text-transform : uppercase;
+	font-weight : 100;
+}
+
+@-moz-document url-prefix() {
+  .container h2 {
+     font-weight : 100;
+  }
+}
+
+.container form{
+	float : left;
+	width : auto;
+}
+
+.container input{
+	float : left;
+	margin : 0 5px 0 0;
+}
+
+.container  div.input-small {
+	float  : left;
+	margin : 0 5px 0 0;
+	width : 180px;
+	height : 26px;
+}
+
+.container  div.input-small input {
+	float  : none;
+	margin : 0;
+}
+
+.container button.medium{
+	float : left;
+	margin : -1px 3px 0 0;
+}
+
+.container .bottom{
+	position : absolute;
+	text-align : center;
+	left : 0;
+	bottom : -22px;
+	width : 543px;
+	height : 20px;
+}
+.messages span.signup{
+	width:200px;
+	background:none !important;
+}
+
+.messages span.signup a, .messages span.forgot a{
+	color:#ffffff;
+	text-decoration:underline;
+}
+.messages span.forgot{
+	width:150px;
+	float:right;
+	background:none !important;
+}

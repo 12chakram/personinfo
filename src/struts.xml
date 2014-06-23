@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+ <include file="struts-default.xml"></include>
+ <package name="com.persinfo.action" namespace="/persinfo" extends="struts-default">
+ <interceptors>
+ <interceptor name="gaeFileUploadInterceptor"
+ class="com.struts2.gae.interceptor.GaeFileUploadInterceptor">
+ </interceptor>
+ <interceptor-stack name="fileUploadStack">
+ <interceptor-ref name="gaeFileUploadInterceptor">
+ </interceptor-ref>
+ <interceptor-ref name="basicStack"></interceptor-ref>
+ </interceptor-stack>
+ </interceptors>
+
+ <default-interceptor-ref name="fileUploadStack" />
+ <action name="addBasicInfo" method="addBasicInfo" class="com.persinfo.action.PersonalInfoAction">
+ <result name="success">personalinfo.jsp</result>
+ <result name="input">personalinfo.jsp</result>
+ </action>
+ <action name="updateBasicInfo" method="updateBasicInfo" class="com.persinfo.action.PersonalInfoAction">
+ <result name="success">personalinfo.jsp</result>
+ <result name="input">personalinfo.jsp</result>
+ </action>
+ <action name="addEduDetails" method="addEduDetails" class="com.persinfo.action.PersonalInfoAction">
+ <result name="success">personalinfo.jsp</result>
+ <result name="input">personalinfo.jsp</result>
+ </action>
+ <action name="addProfessionalInfo" method="addProfessionalInfo" class="com.persinfo.action.PersonalInfoAction">
+ <result name="success">personalinfo.jsp</result>
+ <result name="input">personalinfo.jsp</result>
+ </action>
+  <action name="addBirthDetails" method="addBirthDetails" class="com.persinfo.action.PersonalInfoAction">
+ <result name="success">personalinfo.jsp</result>
+ <result name="input">personalinfo.jsp</result>
+ </action>
+  <action name="updateBirthDetails" method="updateBirthDetails" class="com.persinfo.action.PersonalInfoAction">
+ <result name="success">personalinfo.jsp</result>
+ <result name="input">personalinfo.jsp</result>
+ </action>
+  <action name="updateEduDetails" method="updateEduDetails" class="com.persinfo.action.PersonalInfoAction">
+ <result name="success">personalinfo.jsp</result>
+ <result name="input">personalinfo.jsp</result>
+ </action>
+ <action name="updateProfessionalInfo" method="updateProfessionalInfo" class="com.persinfo.action.PersonalInfoAction">
+ <result name="success">personalinfo.jsp</result>
+  <result name="input">personalinfo.jsp</result>
+ </action>
+ <action name="addImportantDoc" method="addImportantDoc" class="com.persinfo.action.ImportantDocsAction">
+ <result name="success">importantdocs.jsp</result>
+  <result name="input">importantdocs.jsp</result>
+ </action>
+  <action name="updateImportantDoc" method="updateImportantDoc" class="com.persinfo.action.ImportantDocsAction">
+ <result name="success">importantdocs.jsp</result>
+  <result name="input">importantdocs.jsp</result>
+ </action>
+ <action name="addInsuranceDoc" method="addInsuranceDoc" class="com.persinfo.action.InsuranceDocsAction">
+ <result name="success">insurancedocs.jsp</result>
+  <result name="input">insurancedocs.jsp</result>
+ </action>
+  <action name="updateInsuranceDoc" method="updateInsuranceDoc" class="com.persinfo.action.InsuranceDocsAction">
+ <result name="success">insurancedocs.jsp</result>
+  <result name="input">insurancedocs.jsp</result>
+ </action>
+ 
+ 
+ <action name="addDrivingLicense" method="addDrivingLicense" class="com.persinfo.action.VehicleInfoAction">
+ <result name="success">vehicleinfo.jsp</result>
+  <result name="input">vehicleinfo.jsp</result>
+ </action>
+  <action name="updateDrivingLicense" method="updateDrivingLicense" class="com.persinfo.action.VehicleInfoAction">
+ <result name="success">vehicleinfo.jsp</result>
+  <result name="input">importantdocs.jsp</result>
+ </action>
+ <action name="addVehicle" method="addVehicle" class="com.persinfo.action.VehicleInfoAction">
+ <result name="success">vehicleinfo.jsp</result>
+  <result name="input">vehicleinfo.jsp</result>
+ </action>
+  <action name="updateVehicle" method="updateVehicle" class="com.persinfo.action.VehicleInfoAction">
+ <result name="success">vehicleinfo.jsp</result>
+  <result name="input">vehicleinfo.jsp</result>
+ </action>
+ 
+ <action name="showDoc" method="showDoc" class="com.persinfo.action.PersonalInfoAction">
+ <result name="image" type = "stream">
+ <param name="contentType">image/jpeg</param>
+ <param name="inputName">stream</param>
+ <param name="bufferSize">10024</param>
+ </result>
+ <result name="pdf" type = "stream">
+ <param name="contentType">application/pdf</param>
+ <param name="inputName">stream</param>
+ <param name="bufferSize">10024</param>
+ </result>
+ <result name="msword" type = "stream">
+ <param name="contentType">application/msword</param>
+ <param name="inputName">stream</param>
+ <param name="bufferSize">10024</param>
+ </result>
+ <result name="msexcel" type = "stream">
+ <param name="contentType">application/vnd.ms-excel</param>
+ <param name="inputName">stream</param>
+ <param name="bufferSize">10024</param>
+ </result>
+ <result name="mp3" type = "stream">
+ <param name="contentType">audio/mp3</param>
+ <param name="inputName">stream</param>
+ <param name="bufferSize">10024</param>
+ </result>
+ </action>
+ </package>
+
+</struts>

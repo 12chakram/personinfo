@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+  <cron>
+    <url>/reminderemail</url>
+    <description>Mail out remainders</description>
+    <schedule>every 12 hours</schedule>
+    <timezone>Asia/Kolkata</timezone>
+  </cron>
+</cronentries>
